@@ -5,6 +5,4 @@ export class GlobalVariables {
     'http://localhost:5000/'
   );
   public static ENVIRONMENT = environment;
-  // API URL'S
-  public static API_URL_GET_PRODUCTS = '/backend/getAllProducts';
 }

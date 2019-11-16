@@ -21,21 +21,20 @@
     <ul class="summary-items wrapper border">
       <li>
         <span class="summary-items-number">{{productService.checkout.totalItems()}} Items</span>
-        <span class="summary-items-price">{{productService.checkout.total()}}<span class="currency">€</span></span>
+        <span class="summary-items-price">{{productService.checkout.totalWithoutDiscounts()}}<span class="currency">€</span></span>
       </li>
     </ul>
-    <div class="summary-discounts wrapper-half border">
+    <div *ngIf="productService.checkout.getDiscountsApplied().length > 0"
+         class="summary-discounts wrapper-half border">
       <h2>Discounts</h2>
       <ul>
-        <li><span>2x1 Mug offer</span><span>-10€</span></li>
-        <li><span>x3 Shirt offer</span><span>-3€</span></li>
-        <li><span>Promo code</span><span>0€</span></li>
+        <li *ngFor="let discount of productService.checkout.getDiscountsApplied()"><span>{{discount.label}}</span><span>-{{discount.amount}}€</span></li>
       </ul>
     </div>
     <div class="summary-total wrapper">
       <ul>
         <li>
-          <span class="summary-total-cost">Total cost</span><span class="summary-total-price">107€</span>
+          <span class="summary-total-cost">Total cost</span><span class="summary-total-price">{{productService.checkout.total()}}€</span>
         </li>
       </ul>
       <button type="submit">Checkout</button>
