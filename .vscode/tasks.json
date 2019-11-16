@@ -1,0 +1,49 @@
+// Available variables which can be used inside of strings.
+// ${workspaceRoot}: the root folder of the team
+// ${file}: the current opened file
+// ${fileBasename}: the current opened file's basename
+// ${fileDirname}: the current opened file's dirname
+// ${fileExtname}: the current opened file's extension
+// ${cwd}: the current working directory of the spawned process
+
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Cabify-Shopping in development mode",
+      "type": "shell",
+      "command": "npm run start",
+      "isBackground": true,
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": {
+        "owner": "webpack",
+        "source": "webpack",
+        "fileLocation": "absolute",
+        "severity": "error",
+        "pattern": [
+          {
+            "regexp": "^ERROR in (.*)$"
+          },
+          {
+            "regexp": "^.*$"
+          },
+          {
+            "regexp": "^([^:]*): ([^:]*): ([^\\(]*) \\((\\d+):(\\d+)\\)$",
+            "file": 2,
+            "message": 3,
+            "line": 4,
+            "column": 5
+          }
+        ],
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "^.*: Hash: *$",
+          "endsPattern": "^.*(Compiled successfully)|(Failed to compile).*$"
+        }
+      }
+    }
+  ]
+}

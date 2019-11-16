@@ -1,0 +1,3 @@
+{
+  "extends": "./cabify-shopping-solution/tsconfig.json"
+}

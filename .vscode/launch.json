@@ -1,0 +1,59 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Chrome and debug application",
+      "type": "chrome",
+      "request": "launch",
+      "preLaunchTask": "Run Cabify-Shopping in development mode",
+      "url": "http://localhost:5000",
+      "webRoot": "${workspaceFolder}",
+      "port": 10001,
+      "sourceMaps": true,
+      "userDataDir": "${workspaceFolder}/.vscode/chrome",
+      "runtimeArgs": [
+        "--no-default-browser-check",
+        "--no-first-run",
+        "--remote-debugging-port=10001",
+        "--disable-session-crashed-bubble",
+        "--auto-open-devtools-for-tabs",
+        "--profile-directory='Development'"
+      ]
+    },
+    {
+      "name": "Attach to Chrome",
+      "type": "chrome",
+      "request": "attach",
+      "preLaunchTask": "Run Cabify-Shopping in development mode",
+      "url": "http://localhost:5000",
+      "urlFilter": "http://localhost:5000/*",
+      "webRoot": "${workspaceFolder}",
+      "port": 10001,
+      "sourceMaps": true
+    },
+    {
+      "name": "Debug unit tests from Chrome",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:9876/debug.html",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "E2E Testing from Chrome",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/protractor/bin/protractor",
+      "protocol": "inspector",
+      "args": ["${workspaceFolder}/protractor.conf.js"]
+    },
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Attach NodeJS script",
+      "port": 9229
+    }
+  ]
+}

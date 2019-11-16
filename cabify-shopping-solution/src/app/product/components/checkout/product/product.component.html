@@ -1,0 +1,27 @@
+<li class="chekout-product product row">
+  <div class="col-product">
+    <figure class="product-image">
+      <img [src]="product.imageURL"
+           [alt]="product.name" />
+      <div class="product-description">
+        <h1>{{product.name}}</h1>
+        <p class="product-code">Product code {{product.productCode}}</p>
+      </div>
+    </figure>
+  </div>
+  <div class="col-quantity">
+    <button class="count"
+            (click)="decreaseQuantity()">-</button>
+    <input type="text"
+           class="product-quantity"
+           [value]="quantity" />
+    <button class="count"
+            (click)="increaseQuantity()">+</button>
+  </div>
+  <div class="col-price">
+    <span class="product-price">{{product.priceInEuro}}</span><span class="product-currency currency">€</span>
+  </div>
+  <div class="col-total">
+    <span class="product-price">{{productService.checkout.getProductTotalPrice(product.barCode)}}</span><span class="product-currency currency">€</span>
+  </div>
+</li>
