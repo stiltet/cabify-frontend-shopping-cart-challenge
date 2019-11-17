@@ -5,4 +5,8 @@ export class GlobalVariables {
     'http://localhost:5000/'
   );
   public static ENVIRONMENT = environment;
+
+  // ROUTING PATHS
+  public static ROUTING_PATH_HOME_PAGE = '';
+  public static ROUTING_PATH_CHECKOUT = 'checkout';
 }

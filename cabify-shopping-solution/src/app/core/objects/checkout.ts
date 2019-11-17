@@ -24,12 +24,13 @@ export class Checkout {
   }
 
   public remove(barCode: string): void {
-    this.scannedProducts.splice(
-      this.scannedProducts.indexOf(
-        this.scannedProducts.find(product => product.barCode === barCode)
-      ),
-      1
+    const index = this.scannedProducts.indexOf(
+      this.scannedProducts.find(product => product.barCode === barCode)
     );
+    if (index === -1) {
+      return;
+    }
+    this.scannedProducts.splice(index, 1);
   }
 
   public getProductQuantity(barCode: string): number {

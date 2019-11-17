@@ -1,10 +1,12 @@
 {
   "name": "cabify-shopping-solution",
+  "author": "Stellan Lindell",
   "version": "0.0.1",
   "scripts": {
     "ng": "cd cabify-shopping-solution && ng",
     "start": "cd cabify-shopping-solution && ng serve --port 5000 --host 0.0.0.0 --disableHostCheck",
     "build": "cd cabify-shopping-solution && ng build",
+    "build:prod": "cd cabify-shopping-solution && ng build --prod",
     "test": "cd cabify-shopping-solution && ng test",
     "lint": "cd cabify-shopping-solution && ng lint",
     "e2e": "cd cabify-shopping-solution && ng e2e",
