@@ -1,2 +1,39 @@
+@import '../../../../scss/variables';
+
 .app-home {
+  padding: 40px;
+
+  h1 {
+    color: $cabify-black;
+    display: inline-block;
+    margin: 0 10px 0 0;
+  }
+
+  p {
+    color: $cabify-black;
+    margin: 20px 0;
+  }
+
+  svg {
+    color: $cabify-black;
+  }
+
+  .product-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 30px;
+
+    app-home-product {
+      &:not(:first-of-type) {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .btn-container {
+    width: calc(100% - 80px);
+    position: absolute;
+    bottom: 40px;
+  }
 }

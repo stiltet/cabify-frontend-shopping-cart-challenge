@@ -1,0 +1,29 @@
+@import '../../../../../scss/variables';
+
+.app-product-card {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  img {
+    width: 120px;
+    margin-right: 10px;
+  }
+
+  .text-container {
+    .title {
+      color: $cabify-black;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .description {
+      max-height: 100px;
+      color: $cabify-gray;
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+}

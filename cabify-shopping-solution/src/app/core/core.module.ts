@@ -1,12 +1,10 @@
 import { ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core';
 
-import { Checkout } from './objects/checkout';
-
 @NgModule({
   imports: [],
   declarations: [],
   exports: [],
-  providers: [Checkout]
+  providers: []
 })
 export class CoreModule {
   constructor(@Optional() @SkipSelf() parentModule: CoreModule) {

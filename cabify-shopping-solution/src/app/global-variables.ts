@@ -9,4 +9,5 @@ export class GlobalVariables {
   // ROUTING PATHS
   public static ROUTING_PATH_HOME_PAGE = '';
   public static ROUTING_PATH_CHECKOUT = 'checkout';
+  public static ROUTING_PATH_PRODUCT_DETAILS = 'product-details';
 }

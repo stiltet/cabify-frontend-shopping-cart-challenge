@@ -1,6 +1,15 @@
 <div class="app-home">
-
-  <section class="products">
-    <h1 class="main">Shopping cart</h1>
-  </section>
+  <h1>Welcome to Cabify Shopping Cart!</h1>
+  <fa-icon [icon]="faGrinAlt"></fa-icon>
+  <p>Please click on a product to add it to the cart or click the bellow button to go straight to checkout.</p>
+  <div class="product-cards">
+    <ng-container *ngFor="let product of productService.getAllProducts()">
+      <app-home-product [product]="product"
+                        (click)="openProductDetails(product.productCode)"></app-home-product>
+    </ng-container>
+  </div>
+  <div class="btn-container">
+    <button class="btn"
+            (click)="goToCheckout()">Go to Checkout</button>
+  </div>
 </div>

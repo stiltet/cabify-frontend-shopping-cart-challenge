@@ -5,6 +5,7 @@ export class Product {
   description: string;
   priceInEuro: number;
   imageUrl: string;
+  bigImageUrl: string;
   quantity = 0;
 
   constructor(jsonObject: any) {
@@ -14,6 +15,7 @@ export class Product {
     this.description = jsonObject.Description;
     this.priceInEuro = jsonObject.PriceInEuro;
     this.imageUrl = jsonObject.ImageUrl;
+    this.bigImageUrl = jsonObject.BigImageUrl;
   }
 
   static fromJsonArray(array: Array<any>): Product[] {

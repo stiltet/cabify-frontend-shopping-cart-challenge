@@ -1,1 +1,26 @@
-<p>product-details works!</p>
+<div class="app-product-details">
+  <div class="image-container">
+    <img [src]="imageUrl"
+         [alt]="product.name + ' image'" />
+  </div>
+  <div class="text-container">
+    <span class="close-btn"
+          (click)="goBackToHome()"></span>
+    <div class="inner-content">
+      <div class="title-price-container">
+        <h3>{{product.name}}</h3>
+        <h3>{{product.priceInEuro}} €</h3>
+      </div>
+      <hr />
+      <p class="description">
+        {{product.description}}
+      </p>
+      <hr />
+      <div class="product-code">Product code {{product.productCode}}</div>
+      <div class="btn-container">
+        <button class="btn"
+                (click)="addToCart()">Add to cart</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import AllProductsMock from '../../../mock/all-products.mock';
 import { PricingRules } from '../../core/models/pricingRules';
 import { Product } from '../../core/models/product';
-import { Checkout } from '../../core/objects/checkout';
+import { Checkout } from '../objects/checkout';
 
 @Injectable()
 export class ProductService {

@@ -1,7 +1,7 @@
 import AllProductsMock from '../../../mock/all-products.mock';
-import { Discount } from '../models/discount';
-import { PricingRules } from '../models/pricingRules';
-import { Product } from '../models/product';
+import { Discount } from '../../core/models/discount';
+import { PricingRules } from '../../core/models/pricingRules';
+import { Product } from '../../core/models/product';
 
 export class Checkout {
   private allProducts: Product[];
